@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -105,6 +106,10 @@ public class CommentNumberCheck {
 		System.out.println("replies " + replies);
 		System.out.println("Comments + Replies: " + totalComments);
 
+	}
+	@AfterTest
+	public void allDone(){
+		driver.quit();
 	}
 
 }
