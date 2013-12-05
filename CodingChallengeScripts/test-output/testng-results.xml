@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="14634" started-at="2013-12-05T20:45:42Z" finished-at="2013-12-05T20:45:57Z">
+    <groups>
+    </groups>
+    <test name="CommentTest" duration-ms="14634" started-at="2013-12-05T20:45:42Z" finished-at="2013-12-05T20:45:57Z">
+      <class name="lateefCodingScripts.CommentNumberCheck">
+        <test-method status="PASS" signature="initalize()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@6562a121]" name="initalize" is-config="true" duration-ms="9467" started-at="2013-12-05T15:45:42Z" finished-at="2013-12-05T15:45:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalize -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:lateefCodingScripts.CommentNumberCheck@6562a121]" name="login" duration-ms="3413" started-at="2013-12-05T15:45:51Z" finished-at="2013-12-05T15:45:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[User]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[anything]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://10.238.242.37:4000/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="navigateToTargetLink()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@6562a121]" name="navigateToTargetLink" duration-ms="141" started-at="2013-12-05T15:45:55Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.login" finished-at="2013-12-05T15:45:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToTargetLink -->
+        <test-method status="PASS" signature="GetNumberOfComments()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@6562a121]" name="GetNumberOfComments" duration-ms="1586" started-at="2013-12-05T15:45:55Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.navigateToTargetLink" finished-at="2013-12-05T15:45:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetNumberOfComments -->
+      </class> <!-- lateefCodingScripts.CommentNumberCheck -->
+    </test> <!-- CommentTest -->
+  </suite> <!-- Suite1 -->
+</testng-results>

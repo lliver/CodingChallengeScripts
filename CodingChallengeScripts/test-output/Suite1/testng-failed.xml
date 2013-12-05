@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]">
+  <parameter name="Site" value="http://10.238.242.37:4000/"/>
+  <parameter name="FirstName" value="Test"/>
+  <parameter name="LastName" value="User"/>
+  <parameter name="Pass" value="anything"/>
+  <test name="CommentTest(failed)">
+    <parameter name="Site" value="http://10.238.242.37:4000/"/>
+    <parameter name="FirstName" value="Test"/>
+    <parameter name="Pass" value="anything"/>
+    <parameter name="LastName" value="User"/>
+    <classes>
+      <class name="lateefCodingScripts.CommentNumberCheck">
+        <methods>
+          <include name="GetNumberOfComments"/>
+          <include name="login"/>
+          <include name="initalize"/>
+        </methods>
+      </class> <!-- lateefCodingScripts.CommentNumberCheck -->
+    </classes>
+  </test> <!-- CommentTest(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

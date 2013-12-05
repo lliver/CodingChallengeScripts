@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1">
+	<test name="CommentTest">
+		<parameter name="FirstName" value="Test" />
+		<parameter name="LastName" value="User" />
+		<parameter name="Pass" value="anything" />
+		<parameter name="Site" value="http://10.238.242.37:4000/" />
+		<classes>
+			<class name="lateefCodingScripts.CommentNumberCheck" />
+
+		</classes>
+	</test>
+
+
+</suite>
