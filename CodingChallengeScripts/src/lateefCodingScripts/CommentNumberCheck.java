@@ -2,6 +2,7 @@ package lateefCodingScripts;
 
 import java.util.List;
 
+import org.apache.commons.lang3.text.WordUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,15 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
+/**
+ * 
+ * @author Lateef
+ * Date: Dec 6, 2013
+ * 
+ * 
+ * 
+ * 
+ */
 public class CommentNumberCheck {
 
 	private WebDriver driver;
@@ -41,7 +50,13 @@ public class CommentNumberCheck {
 
 	}
 
-
+	/**
+	 * Logs into site
+	 * @param FirstName
+	 * @param LastName
+	 * @param Pass
+	 * @param Site
+	 */
 	@Parameters({ "FirstName", "LastName", "Pass", "Site" })
 	@Test
 	public void login(String FirstName, String LastName, String Pass,
@@ -49,7 +64,7 @@ public class CommentNumberCheck {
 
 		System.out.println("Logging in......");
 
-		String User = FirstName + "." + LastName;
+		String User = WordUtils.capitalize(FirstName) + "." + WordUtils.capitalize(LastName);
 		User = User.toLowerCase();
 		driver.get(Site);
 		driver.manage().window().maximize();
@@ -62,7 +77,7 @@ public class CommentNumberCheck {
 		element.sendKeys(Pass);
 		element.submit();
 
-		boolean PassFail = driver.findElement(By.partialLinkText(FirstName)).isDisplayed();
+		boolean PassFail = driver.findElement(By.partialLinkText(WordUtils.capitalize(FirstName))).isDisplayed();
 
 		if (PassFail) {
 			System.out.println("Logging Successful");
@@ -74,15 +89,21 @@ public class CommentNumberCheck {
 
 
 	@Test(dependsOnMethods = { "login" })
+	/**
+	 * 
+	 */
 	public void navigateToTargetLink(){
 		WebElement element = driver.findElement(By.linkText("Bronze"));
 		element.click();	
 	}
 	
 	@Test(dependsOnMethods = { "navigateToTargetLink" })
+	/**
+	 * @returns
+	 */
 	public void GetNumberOfComments() {
 
-
+		getChallengeTitle();
 
 		int totalComments = 0;
 		WebElement e = driver.findElement(By.partialLinkText(" Comments"));
@@ -107,6 +128,17 @@ public class CommentNumberCheck {
 		System.out.println("Comments + Replies: " + totalComments);
 
 	}
+	
+	/**
+	 * Gets Title for current challenge
+	 */
+	private void getChallengeTitle() {
+		WebElement e = driver.findElement(By.id("challengeTitle"));
+		System.out.println("Challenge: " + e.getText());
+		
+	}
+
+
 	@AfterTest
 	public void allDone(){
 		driver.quit();

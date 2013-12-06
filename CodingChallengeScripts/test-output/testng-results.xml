@@ -2,25 +2,25 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="13513" started-at="2013-12-05T21:39:21Z" finished-at="2013-12-05T21:39:34Z">
+  <suite name="Suite1" duration-ms="15205" started-at="2013-12-06T14:17:56Z" finished-at="2013-12-06T14:18:12Z">
     <groups>
     </groups>
-    <test name="CommentTest" duration-ms="13513" started-at="2013-12-05T21:39:21Z" finished-at="2013-12-05T21:39:34Z">
+    <test name="CommentTest" duration-ms="15205" started-at="2013-12-06T14:17:56Z" finished-at="2013-12-06T14:18:12Z">
       <class name="lateefCodingScripts.CommentNumberCheck">
-        <test-method status="PASS" signature="initalize()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@56911387]" name="initalize" is-config="true" duration-ms="8071" started-at="2013-12-05T16:39:21Z" finished-at="2013-12-05T16:39:29Z">
+        <test-method status="PASS" signature="initalize()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@cdeb65f]" name="initalize" is-config="true" duration-ms="9887" started-at="2013-12-06T09:17:56Z" finished-at="2013-12-06T09:18:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalize -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:lateefCodingScripts.CommentNumberCheck@56911387]" name="login" duration-ms="3140" started-at="2013-12-05T16:39:29Z" finished-at="2013-12-05T16:39:32Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:lateefCodingScripts.CommentNumberCheck@cdeb65f]" name="login" duration-ms="2862" started-at="2013-12-06T09:18:06Z" finished-at="2013-12-06T09:18:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Test]]>
+                <![CDATA[test]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[User]]>
+                <![CDATA[user]]>
               </value>
             </param>
             <param index="2">
@@ -37,15 +37,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="navigateToTargetLink()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@56911387]" name="navigateToTargetLink" duration-ms="1750" started-at="2013-12-05T16:39:32Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.login" finished-at="2013-12-05T16:39:34Z">
+        <test-method status="PASS" signature="navigateToTargetLink()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@cdeb65f]" name="navigateToTargetLink" duration-ms="1773" started-at="2013-12-06T09:18:09Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.login" finished-at="2013-12-06T09:18:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToTargetLink -->
-        <test-method status="PASS" signature="GetNumberOfComments()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@56911387]" name="GetNumberOfComments" duration-ms="299" started-at="2013-12-05T16:39:34Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.navigateToTargetLink" finished-at="2013-12-05T16:39:34Z">
+        <test-method status="PASS" signature="GetNumberOfComments()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@cdeb65f]" name="GetNumberOfComments" duration-ms="400" started-at="2013-12-06T09:18:11Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.navigateToTargetLink" finished-at="2013-12-06T09:18:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetNumberOfComments -->
-        <test-method status="PASS" signature="allDone()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@56911387]" name="allDone" is-config="true" duration-ms="233" started-at="2013-12-05T16:39:34Z" finished-at="2013-12-05T16:39:34Z">
+        <test-method status="PASS" signature="allDone()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@cdeb65f]" name="allDone" is-config="true" duration-ms="264" started-at="2013-12-06T09:18:11Z" finished-at="2013-12-06T09:18:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allDone -->
