@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
+  <parameter name="Site" value="http://10.238.242.37:4000/"/>
+  <parameter name="FirstName" value="test"/>
+  <parameter name="Pass" value="anything"/>
+  <parameter name="LastName" value="user"/>
   <test name="Default test(failed)">
     <classes>
       <class name="lateefCodingScripts.CommentNumberCheck">
         <methods>
           <include name="GetNumberOfComments"/>
+          <include name="allDone"/>
           <include name="login"/>
+          <include name="initalize"/>
+          <include name="navigateToTargetLink"/>
         </methods>
       </class> <!-- lateefCodingScripts.CommentNumberCheck -->
     </classes>

@@ -2,20 +2,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]">
   <parameter name="Site" value="http://10.238.242.37:4000/"/>
-  <parameter name="FirstName" value="Test"/>
-  <parameter name="LastName" value="User"/>
+  <parameter name="FirstName" value="test"/>
+  <parameter name="LastName" value="user"/>
   <parameter name="Pass" value="anything"/>
   <test name="CommentTest(failed)">
     <parameter name="Site" value="http://10.238.242.37:4000/"/>
-    <parameter name="FirstName" value="Test"/>
+    <parameter name="FirstName" value="test"/>
     <parameter name="Pass" value="anything"/>
-    <parameter name="LastName" value="User"/>
+    <parameter name="LastName" value="user"/>
     <classes>
       <class name="lateefCodingScripts.CommentNumberCheck">
         <methods>
-          <include name="GetNumberOfComments"/>
           <include name="login"/>
           <include name="initalize"/>
+          <include name="navigateToTargetLink"/>
         </methods>
       </class> <!-- lateefCodingScripts.CommentNumberCheck -->
     </classes>

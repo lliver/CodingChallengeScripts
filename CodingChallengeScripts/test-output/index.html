@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,7 @@
                     <div class="method-list-content passed suite-Suite1">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="lateefCodingScripts.CommentNumberCheck" hash-for-method="GetNumberOfComments">GetNumberOfComments</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="lateefCodingScripts.CommentNumberCheck" hash-for-method="login(Test, User, anything, http://10.238.242.37:4000/)">login(Test, User, anything, http://10.238.242.37:4000/)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite1" title="lateefCodingScripts.CommentNumberCheck" hash-for-method="login(test, user, anything, http://10.238.242.37:4000/)">login(test, user, anything, http://10.238.242.37:4000/)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -134,17 +129,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GetNumberOfComments">
-                  </a> <!-- GetNumberOfComments -->
-                  <span class="method-name">GetNumberOfComments</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="login(Test, User, anything, http://10.238.242.37:4000/)">
-                  </a> <!-- login(Test, User, anything, http://10.238.242.37:4000/) -->
+                  <a name="login(test, user, anything, http://10.238.242.37:4000/)">
+                  </a> <!-- login(test, user, anything, http://10.238.242.37:4000/) -->
                   <span class="method-name">login</span>
-                  <span class="parameters">(Test, User, anything, http://10.238.242.37:4000/)</span>
+                  <span class="parameters">(test, user, anything, http://10.238.242.37:4000/)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -168,9 +156,9 @@
 &lt;suite name=&quot;Suite1&quot;&gt;
   &lt;test name=&quot;CommentTest&quot;&gt;
     &lt;parameter name=&quot;Site&quot; value=&quot;http://10.238.242.37:4000/&quot;/&gt;
-    &lt;parameter name=&quot;FirstName&quot; value=&quot;Test&quot;/&gt;
+    &lt;parameter name=&quot;FirstName&quot; value=&quot;test&quot;/&gt;
     &lt;parameter name=&quot;Pass&quot; value=&quot;anything&quot;/&gt;
-    &lt;parameter name=&quot;LastName&quot; value=&quot;User&quot;/&gt;
+    &lt;parameter name=&quot;LastName&quot; value=&quot;user&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;lateefCodingScripts.CommentNumberCheck&quot;/&gt;
     &lt;/classes&gt;
@@ -212,24 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'login')
 data.setCell(0, 2, 'lateefCodingScripts.CommentNumberCheck')
-data.setCell(0, 3, 3140);
+data.setCell(0, 3, 3245);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'navigateToTargetLink')
 data.setCell(1, 2, 'lateefCodingScripts.CommentNumberCheck')
-data.setCell(1, 3, 1750);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'GetNumberOfComments')
-data.setCell(2, 2, 'lateefCodingScripts.CommentNumberCheck')
-data.setCell(2, 3, 299);
+data.setCell(1, 3, 1344);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -261,21 +245,13 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">login(Test, User, anything, http://10.238.242.37:4000/)</span>
-                <span class="method-start">8078 ms</span>
+                <span class="method-name">login(test, user, anything, http://10.238.242.37:4000/)</span>
+                <span class="method-start">7159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">navigateToTargetLink</span>
-                <span class="method-start">11222 ms</span>
+                <span class="method-start">10408 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">GetNumberOfComments</span>
-                <span class="method-start">12974 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">allDone</span>
-                <span class="method-start">13274 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
