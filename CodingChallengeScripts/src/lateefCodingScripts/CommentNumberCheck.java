@@ -72,7 +72,7 @@ public class CommentNumberCheck {
 		driver.get(Site);
 		driver.manage().window().maximize();
 		home = Site;
-		System.out.println("Logging in");
+	//	System.out.println("Logging in");
 		WebElement element = driver.findElement(By.name("user[username]"));
 
 		element.sendKeys(User);
@@ -91,16 +91,16 @@ public class CommentNumberCheck {
 		assert (PassFail);
 	}
 
-
+	@Parameters({ "ChallengeLink" })
 	@Test(dependsOnMethods = { "login" })
 	/**
 	 * 
 	 */
-	public void navigateToTargetLink(){
+	public void navigateToTargetLink(String ChallengeLink){
 //		System.out.println("Toggle attempt");
 //		cycleDropdownToggle();
 //		System.out.println("Out of Toggle attempt");
-		WebElement element = driver.findElement(By.linkText("Bronze"));
+		WebElement element = driver.findElement(By.linkText(ChallengeLink));
 		element.click();	
 	}
 	
@@ -108,35 +108,59 @@ public class CommentNumberCheck {
 	public void cycleDropdownToggle(){
 		
 		List<WebElement> challengeToggles = driver.findElements(By.cssSelector(".btn.btn-default.dropdown-toggle"));
-
+		WebElement x = challengeToggles.get(1);//driver.findElement(By.cssSelector(".btn.btn-default.dropdown-toggle")).get;
+		int i = 0;
 		System.out.println("Toggle Loop attempt");
-		for(WebElement toggle:challengeToggles ){
+		for(WebElement toggle:challengeToggles ) {
 			toggle.click();
 			
 			System.out.println("Toggle Clicked");
 			//cycleChallenges(toggle);
-			toggle.click();
-			List<WebElement> challengeListing = driver.findElements(By.cssSelector(".dropdown-menu>li>a"));
-			for(WebElement challenge:challengeListing ){
+		//	toggle.click();
+		//	List<WebElement> challengeListing = driver.findElements(By.cssSelector(".dropdown-menu>li>a"));
+			List<WebElement> challengeListing = driver.findElements(By.tagName("li"));
+			String[] dropdownList;
+			for(WebElement challenge:challengeListing ) {
 				if(challenge.getText() == "Archive"){
 					System.out.println("Stopped here");
 					break;
 				}else{
+					System.out.println("Size of chall list"+ challengeListing.size());
+					System.out.println(challenge.getText());
+					dropdownList = challenge.getText().split("\n");
+					System.out.println("length " + dropdownList.length);
+					int len = dropdownList.length;
+					
 					System.out.println("Clicking Challenge attempt");
-					challenge.click();
+					for( i = 2; i < len; i++) {
+						System.out.println("item "+ i +" : " + dropdownList[i]);
+						driver.findElement(By.linkText(dropdownList[i])).click();
+						GetNumberOfComments();
+					}
+					System.out.println("item "+" : " + dropdownList[2]);
+					System.out.println("item "+" : " + dropdownList[3]);
+					System.out.println("item "+" : " + dropdownList[4]);
+
+
+					driver.findElement(By.linkText("Factorial Fun")).click();
+					//challenge.click();
 					System.out.println("Challenge test attempt");			
 					GetNumberOfComments();
 					System.out.println("Going home attempt");		
 					new WebDriverWait(driver, 300);
 					goHome();
 					System.out.println("Setting up for next round attempt");	
-					toggle.click();
+					//System.out.println(toggle.getText());
+				//	((WebElement) driver.findElements(By.cssSelector(".btn.btn-default.dropdown-toggle"))).click();
+				//	toggle.click();
+					
 				}
 				System.out.println("Toggle Clicked");
 				new WebDriverWait(driver, 300);
 			//	cycleChallenges();
 				
 			}
+			System.out.println("Outter loop Clicked");
 			new WebDriverWait(driver, 300);
 		//	cycleChallenges();
 			
@@ -151,6 +175,7 @@ public class CommentNumberCheck {
 			if(challenge.getText() == "Archive"){
 				break;
 			}else{
+				challenge.getText();
 				System.out.println("Clicking Challenge attempt");
 				challenge.click();
 				System.out.println("Challenge test attempt");			
@@ -168,7 +193,9 @@ public class CommentNumberCheck {
 
 	
 	private void goHome() {
-		driver.get(home);
+		//driver.get(home);
+		driver.findElement(By.cssSelector(".navbar>a>img"));
+		driver.findElement(By.cssSelector(".navbar>a>img")).click();
 		new WebDriverWait(driver, 300);
 		// TODO Auto-generated method stub
 		
@@ -228,33 +255,42 @@ public class CommentNumberCheck {
 		String[] url = driver.getCurrentUrl().split("/");
 		int MonthCounter = 0;
 		String currMonth = "november";
-		for (MonthCounter = 0; MonthCounter > 11; MonthCounter++) {
-			if (Months[MonthCounter] == url[2]) {
+		for (MonthCounter = 0; MonthCounter < 11; MonthCounter++) {
+			if (Months[MonthCounter] == url[3]) {
 				currMonth = Months[MonthCounter];
 				return currMonth;
 			}
 		}
-		return currMonth;
+		return url[3];
+	//	return currMonth;
 	}
 
-
+//	@Parameters({ "ChallengeLink" })
 	private String getChallengeLevel() {
 		String[] url = driver.getCurrentUrl().split("/");
 		int LevelCounter = 0;
 		String currChallenge = "bronze";
-		for (LevelCounter = 0; LevelCounter > 2; LevelCounter++) {
-			if (Challenge[LevelCounter] == url[3]) {
+		for (LevelCounter = 0; LevelCounter < 2; LevelCounter++) {
+			if (Challenge[LevelCounter] == url[4]) {
 				currChallenge = Challenge[LevelCounter];
 				return currChallenge;
 			}
 		}
-		return currChallenge;
+		return url[4];
+//		return currChallenge;
 	}
 
 
 
+
+	public void logout(){
+		goHome();
+		driver.findElement(By.linkText("Logout")).click();
+	}
+	
 	@AfterTest
 	public void allDone(){
+		logout();
 		driver.quit();
 	}
 

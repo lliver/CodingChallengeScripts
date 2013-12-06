@@ -2,22 +2,48 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite1]">
   <parameter name="Site" value="http://10.238.242.37:4000/"/>
+  <parameter name="ChallengeLink" value="Gold"/>
   <parameter name="FirstName" value="test"/>
   <parameter name="LastName" value="user"/>
   <parameter name="Pass" value="anything"/>
   <test name="CommentTest(failed)">
     <parameter name="Site" value="http://10.238.242.37:4000/"/>
+    <parameter name="ChallengeLink" value="Bronze"/>
     <parameter name="FirstName" value="test"/>
     <parameter name="Pass" value="anything"/>
     <parameter name="LastName" value="user"/>
     <classes>
       <class name="lateefCodingScripts.CommentNumberCheck">
         <methods>
+          <include name="GetNumberOfComments"/>
+          <include name="allDone"/>
+          <include name="allDone"/>
           <include name="login"/>
           <include name="initalize"/>
-          <include name="navigateToTargetLink"/>
+          <include name="initalize"/>
+          <include name="navigateToTargetLink" invocation-numbers="0"/>
         </methods>
       </class> <!-- lateefCodingScripts.CommentNumberCheck -->
     </classes>
   </test> <!-- CommentTest(failed) -->
+  <test name="CommentTest2(failed)">
+    <parameter name="Site" value="http://10.238.242.37:4000/"/>
+    <parameter name="ChallengeLink" value="Gold"/>
+    <parameter name="FirstName" value="test"/>
+    <parameter name="Pass" value="anything"/>
+    <parameter name="LastName" value="user"/>
+    <classes>
+      <class name="lateefCodingScripts.CommentNumberCheck">
+        <methods>
+          <include name="GetNumberOfComments"/>
+          <include name="allDone"/>
+          <include name="allDone"/>
+          <include name="login"/>
+          <include name="initalize"/>
+          <include name="initalize"/>
+          <include name="navigateToTargetLink" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- lateefCodingScripts.CommentNumberCheck -->
+    </classes>
+  </test> <!-- CommentTest2(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

@@ -6,11 +6,33 @@
 		<parameter name="LastName" value="user" />
 		<parameter name="Pass" value="anything" />
 		<parameter name="Site" value="http://10.238.242.37:4000/" />
+		<parameter name="ChallengeLink" value="Bronze" />		
 		<classes>
 			<class name="lateefCodingScripts.CommentNumberCheck" />
 
 		</classes>
 	</test>
+	<test name="CommentTest2">
+		<parameter name="FirstName" value="test" />
+		<parameter name="LastName" value="user" />
+		<parameter name="Pass" value="anything" />
+		<parameter name="Site" value="http://10.238.242.37:4000/" />
+		<parameter name="ChallengeLink" value="Silver" />		
+		<classes>
+			<class name="lateefCodingScripts.CommentNumberCheck" />
 
+		</classes>
+	</test>
+		<test name="CommentTest3">
+		<parameter name="FirstName" value="test" />
+		<parameter name="LastName" value="user" />
+		<parameter name="Pass" value="anything" />
+		<parameter name="Site" value="http://10.238.242.37:4000/" />
+		<parameter name="ChallengeLink" value="Gold" />		
+		<classes>
+			<class name="lateefCodingScripts.CommentNumberCheck" />
+
+		</classes>
+	</test>
 
 </suite>

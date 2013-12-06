@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="11758" started-at="2013-12-06T17:00:38Z" finished-at="2013-12-06T17:00:50Z">
+  <suite name="Default suite" duration-ms="13175" started-at="2013-12-06T22:06:01Z" finished-at="2013-12-06T22:06:14Z">
     <groups>
     </groups>
-    <test name="CommentTest" duration-ms="11758" started-at="2013-12-06T17:00:38Z" finished-at="2013-12-06T17:00:50Z">
+    <test name="Default test" duration-ms="13175" started-at="2013-12-06T22:06:01Z" finished-at="2013-12-06T22:06:14Z">
       <class name="lateefCodingScripts.CommentNumberCheck">
-        <test-method status="PASS" signature="initalize()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@72d876d9]" name="initalize" is-config="true" duration-ms="7152" started-at="2013-12-06T12:00:38Z" finished-at="2013-12-06T12:00:45Z">
+        <test-method status="PASS" signature="initalize()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@1c48fe36]" name="initalize" is-config="true" duration-ms="6732" started-at="2013-12-06T17:06:01Z" finished-at="2013-12-06T17:06:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalize -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:lateefCodingScripts.CommentNumberCheck@72d876d9]" name="login" duration-ms="3245" started-at="2013-12-06T12:00:45Z" finished-at="2013-12-06T12:00:49Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:lateefCodingScripts.CommentNumberCheck@1c48fe36]" name="login" duration-ms="2921" started-at="2013-12-06T17:06:08Z" finished-at="2013-12-06T17:06:11Z">
           <params>
             <param index="0">
               <value>
@@ -37,11 +37,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="navigateToTargetLink()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@72d876d9]" name="navigateToTargetLink" duration-ms="1344" started-at="2013-12-06T12:00:49Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.login" finished-at="2013-12-06T12:00:50Z">
+        <test-method status="PASS" signature="navigateToTargetLink(java.lang.String)[pri:0, instance:lateefCodingScripts.CommentNumberCheck@1c48fe36]" name="navigateToTargetLink" duration-ms="2132" started-at="2013-12-06T17:06:11Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.login" finished-at="2013-12-06T17:06:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Gold]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigateToTargetLink -->
+        <test-method status="PASS" signature="GetNumberOfComments()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@1c48fe36]" name="GetNumberOfComments" duration-ms="233" started-at="2013-12-06T17:06:13Z" depends-on-methods="lateefCodingScripts.CommentNumberCheck.navigateToTargetLink" finished-at="2013-12-06T17:06:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetNumberOfComments -->
+        <test-method status="PASS" signature="allDone()[pri:0, instance:lateefCodingScripts.CommentNumberCheck@1c48fe36]" name="allDone" is-config="true" duration-ms="1135" started-at="2013-12-06T17:06:13Z" finished-at="2013-12-06T17:06:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- allDone -->
       </class> <!-- lateefCodingScripts.CommentNumberCheck -->
-    </test> <!-- CommentTest -->
-  </suite> <!-- Suite1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
